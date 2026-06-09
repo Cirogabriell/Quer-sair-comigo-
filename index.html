@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Um convite especial ❤️</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #2b0f1f, #7a1f3d, #d94f70);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      color: #fff;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 520px;
+      padding: 40px 28px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 28px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      position: relative;
+      z-index: 2;
+    }
+
+    .heart {
+      font-size: 46px;
+      margin-bottom: 16px;
+      animation: pulse 1.4s infinite;
+    }
+
+    h1 {
+      font-size: 34px;
+      margin-bottom: 14px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 26px;
+      color: #ffe6ee;
+    }
+
+    .details {
+      background: rgba(255, 255, 255, 0.16);
+      padding: 18px;
+      border-radius: 18px;
+      margin-bottom: 30px;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    .details strong {
+      color: #fff;
+    }
+
+    .buttons {
+      width: 220px;
+      height: 60px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .btn {
+      border: none;
+      padding: 13px 22px;
+      min-width: 90px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    .btn-sim {
+      background: #fff;
+      color: #b21f45;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .btn-sim:hover {
+      transform: scale(1.08);
+      background: #ffe3ec;
+    }
+
+    .btn-nao {
+      background: #1f1f1f;
+      color: white;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .btn-nao:hover {
+      background: #000;
+    }
+
+    .footer {
+      margin-top: 28px;
+      font-size: 14px;
+      color: #ffd7e4;
+      opacity: 0.9;
+    }
+
+    .floating-heart {
+      position: absolute;
+      color: rgba(255, 255, 255, 0.25);
+      font-size: 22px;
+      animation: float 7s infinite ease-in-out;
+      z-index: 1;
+    }
+
+    .floating-heart:nth-child(1) {
+      left: 10%;
+      top: 15%;
+      animation-delay: 0s;
+    }
+
+    .floating-heart:nth-child(2) {
+      right: 12%;
+      top: 20%;
+      animation-delay: 1.5s;
+    }
+
+    .floating-heart:nth-child(3) {
+      left: 20%;
+      bottom: 18%;
+      animation-delay: 3s;
+    }
+
+    .floating-heart:nth-child(4) {
+      right: 18%;
+      bottom: 15%;
+      animation-delay: 4.5s;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.15);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-25px) rotate(12deg);
+      }
+
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 28px;
+      }
+
+      .subtitle {
+        font-size: 16px;
+      }
+
+      .container {
+        padding: 32px 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <span class="floating-heart">❤️</span>
+  <span class="floating-heart">💘</span>
+  <span class="floating-heart">💕</span>
+  <span class="floating-heart">🥂</span>
+
+  <div class="container">
+    <div class="heart">❤️</div>
+
+    <h1>Quer viver uma noite especial comigo?</h1>
+
+    <p class="subtitle">
+      Preparei um convite só para você, porque uma mensagem normal seria pouco
+      para o homem que deixa meus dias mais bonitos.
+    </p>
+
+    <div class="details">
+      <p><strong>Quando:</strong> Sexta-feira, dia 12</p>
+      <p><strong>Onde:</strong> Rua FC15 - Flor do Cerrado</p>
+      <p><strong>O plano:</strong> jantar, bebidas, carinho e nós dois juntos.</p>
+    </div>
+
+    <div class="buttons">
+      <button class="btn btn-sim" onclick="sim()">SIM</button>
+      <button class="btn btn-nao" onclick="desvia(this)" onmouseover="desvia(this)">NÃO</button>
+    </div>
+
+    <p class="footer">
+      Escolha com sabedoria. Mas vamos fingir que existe outra opção.
+    </p>
+  </div>
+
+  <script>
+    function sim() {
+      alert("Então está marcado, meu amor! ❤️ Preparei tudo pensando em você.");
+
+      // Redireciona após clicar no SIM
+      location.href = "https://music.youtube.com/watch?v=izGwDsrQ1eQ";
+    }
+
+    function desvia(btn) {
+      const larguraTela = window.innerWidth;
+      const alturaTela = window.innerHeight;
+
+      const novaPosicaoX = Math.random() * (larguraTela - btn.offsetWidth);
+      const novaPosicaoY = Math.random() * (alturaTela - btn.offsetHeight);
+
+      btn.style.position = "fixed";
+      btn.style.left = `${novaPosicaoX}px`;
+      btn.style.top = `${novaPosicaoY}px`;
+    }
+  </script>
+
+</body>
+
+</html>
